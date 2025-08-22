@@ -1,71 +1,63 @@
-# Getting Started with Create React App
+🗺️ Route Generator
+📌 Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Route Generator is a fullstack application that generates back-and-forth running routes of a given distance starting from the user’s location. It integrates OpenStreetMap (OSM) data with a Spring Boot backend and a React.js frontend to create custom routes using my custom made algorithm.
 
-## Available Scripts
+I built this project after realising that current running route generators either require a subscription (Strava) or do not start from my location and require me to travel somewhere to do. This sparked an idea of creating my own running route generator that satisfies my needs.
 
-In the project directory, you can run:
+🚀 Features
 
-### `npm start`
+Custom Route Generation: Input distance → generate unique running routes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Reset & Regenerate for multiple options
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Export Routes as GPX for GPS devices or running tracker apps like Strava
 
-### `npm test`
+Cache System for up to 6 to avoid recomputation for identical requests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Interactive UI Toolbar for distance input and controls
 
-### `npm run build`
+🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend: React.js, CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend: Spring Boot, RESTful APIs, Maven
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Data & APIs:
 
-### `npm run eject`
+OpenStreetMap (OSM) for mapping data
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Geolocation API for starting point detection
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📸 Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="1847" height="870" alt="image" src="https://github.com/user-attachments/assets/8a62425f-3e88-4fa0-b1e4-91d5fc9c4165" />
 
-## Learn More
+<img width="1848" height="858" alt="image" src="https://github.com/user-attachments/assets/80336673-e28f-4621-9c55-896b76b3feae" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="1827" height="648" alt="image" src="https://github.com/user-attachments/assets/be36b07e-6d8c-42f1-8bff-cc5f1ed1e4bb" />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📂 Setup
 
-### Analyzing the Bundle Size
+FIRST DOWNLOAD OSM DATA FILE FOR WANTED AREA AND PUT IN PROJECT FOLDER (e.g. for Greater London: https://download.geofabrik.de/europe/united-kingdom/england/greater-london.html)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Clone the repository
 
-### Making a Progressive Web App
+git clone https://github.com/your-username/route-generator.git
+cd route-generator
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Start backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cd backend
+mvn spring-boot:run
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start frontend
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# running-route-generator
+cd frontend
+npm install
+npm start
