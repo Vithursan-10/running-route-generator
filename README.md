@@ -42,7 +42,8 @@ Geolocation API for starting point detection
 
 📂 Setup
 
-FIRST DOWNLOAD OSM DATA FILE FOR WANTED AREA AND PUT IN PROJECT FOLDER    (e.g. for Greater London: https://download.geofabrik.de/europe/united-kingdom/england/greater-london.html)
+FIRST DOWNLOAD OSM DATA FILE FOR WANTED AREA AND PUT IN PROJECT FOLDER    
+(e.g. for Greater London: https://download.geofabrik.de/europe/united-kingdom/england/greater-london.html)
 
 Clone the repository
 
